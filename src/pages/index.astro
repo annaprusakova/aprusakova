@@ -1,5 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <html lang="en">
@@ -9,20 +10,39 @@ import Footer from '../components/Footer.astro';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Prusakova</title>
+		<ViewTransitions />
+		<style>
+			/* Custom styles */
+			/* Define keyframes for text gradient animation */
+			@keyframes textGradient {
+			  0% { background-position: 0% 50%; }
+			  50% { background-position: 100% 50%; }
+			  100% { background-position: 0% 50%; }
+			}
+		
+			/* Apply animation to text */
+			.text-background-clip-animation:hover {
+			  background-image: linear-gradient(to right, #9195F6, #F8C1F8); /* Specify your gradient colors */
+			  background-size: 200% auto;
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			  animation: textGradient 2s linear infinite;
+			}
+		  </style>
 	</head>
 	<body class="bg-gray">
 		<main class="flex w-full flex-col min-h-screen items-center justify-center">
 			<div class="flex gap-6 items-end">
-				<img class="w-56 h-56" src="/logo.svg" alt="logo" />
+				<img class="w-56 h-56" src="/logo.svg" alt="logo" transition:animate="slide"/>
 				<div class="h-full flex flex-col gap-8">
-					<a class="uppercase font-extrabold text-5xl cursor-pointer">
-						<span>About me</span>
+					<a class="uppercase font-extrabold text-5xl cursor-pointer hover:scale-105">
+						<span class="text-background-clip-animation">About me</span>
 					</a>
-					<a class="uppercase font-extrabold text-5xl cursor-pointer">
-						<span>Blog</span>
+					<a href="/blog" class="uppercase font-extrabold text-5xl cursor-pointer hover:scale-105">
+						<span class="text-background-clip-animation">Blog</span>
 					</a>
-					<a class="uppercase font-extrabold text-5xl cursor-pointer">
-						<span>Projects</span>
+					<a class="uppercase font-extrabold text-5xl cursor-pointer hover:scale-105">
+						<span class="text-background-clip-animation">Projects</span>
 					</a>
 				</div>
 			</div>

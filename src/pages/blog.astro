@@ -1,0 +1,23 @@
+---
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Prusakova</title>
+	</head>
+	<body class="bg-gray">
+		<main class="flex w-full flex-col min-h-screen items-center justify-center">
+			<div class="flex items-center flex-col justify-evenly h-56">
+				<span class="text-5xl font-extrabold">Oops, no content yet.</span>
+                <Button />
+			</div>
+			<Footer />
+		</main>
+	</body>
+</html>
