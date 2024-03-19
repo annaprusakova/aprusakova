@@ -1,0 +1,22 @@
+---
+import Layout from '../components/Layout.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+import { projects } from '../data/projects';
+
+type Project = {
+        name: string;
+        description: string;
+        link: string;
+        image: string;
+        hashtags: string[];
+}
+---
+<Layout title="Projects">
+	<div class="w-full h-full p-3 flex flex-wrap justify-center gap-3">
+                {projects.map((project: Project) => (
+                        <Card project={project} />
+                ))}
+	</div>
+        <Button />
+</Layout>
