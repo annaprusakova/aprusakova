@@ -1,0 +1,57 @@
+---
+import Layout from '../components/Layout.astro';
+import Button from '../components/Button.astro';
+---
+<Layout title="About me">
+    <div class="flex items-center flex-col justify-evenly py-12 lg:py-24 text-black">
+        <div class="container flex flex-col gap-6 px-4 md:gap-10 md:flex-row md:items-center md:px-6 lg:items-start xl:gap-16">
+            <div class="order-1 flex-shrink-0 w-full max-w-sm order-2 md:order-1 lg:max-w-xs">
+              <img
+                alt="Me"
+                class="aspect-[4/3] rounded object-cover object-center"
+                height="300"
+                src="/me.JPG"
+                width="400"
+              />
+            </div>
+            <div class="order-2 space-y-4 md:space-y-6 lg:space-y-8 xl:space-y-10 md:order-2">
+              <div class="space-y-2">
+                <h2 class="text-3xl mb-2 font-bold tracking-tighter sm:text-4xl md:text-5xl">Hi, I'm Anna</h2>
+                <p class="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    Fullstack/Frontend developer with more than two years of commercial experience in development. I worked on different blockchain, health insurance, health care, and real estate projects. I am eager to continue learning and growing my skills as a developer while making meaningful contributions to developing innovative solutions.
+                </p>
+              </div>
+              <dl class="grid gap-4 md:gap-2 lg:gap-4 xl:gap-6 sm:grid-cols-2 md:grid-cols-1">
+                <div class="space-y-1.5">
+                  <dt class="text-xl font-medium">Skills</dt>
+                  <dd class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="font-bold">Languages:</span>	JavaScript, TypeScript, SQL
+                </dd>
+                <dd class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="font-bold">Technologies and Frameworks: </span>React, Next.js, Node js, Express.js, HTML/CSS, Sass, Material UI, Tailwind, Redux, Storybook, Astro
+                </dd>
+                <dd class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="font-bold">Databases: </span>MySQL, PostgreSQL, MongoDB, Prisma
+                </dd>
+                </div>
+                <div class="space-y-1.5">
+                    <dt class="text-xl font-medium">Education</dt>
+                    <dd class="text-sm text-gray-500 dark:text-gray-400">2020-2021 - Master’s degree, Computer Science, Odesa National Academy of Food Technologies</dd>
+                    <dd class="text-sm text-gray-500 dark:text-gray-400">2016-2020 - Bachelor‘s degree, Computer Science, Odesa National Academy of Food Technologies
+                    </dd>
+                </div>
+                <div class="space-y-1.5">
+                    <dt class="text-xl font-medium">Experience</dt>
+                    <dd class="text-sm text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Full-Stack Developer, CML Team</span>   February 2022 – February 2024 
+                    </dd>
+                    <dd class="text-sm text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Full-Stack Developer, Binary Studio Academy</span>   August 2021 – September 2021 
+                    </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+    </div>
+    <Button />
+</Layout>

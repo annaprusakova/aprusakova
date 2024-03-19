@@ -2,7 +2,7 @@
 const { project } = Astro.props;
 const { id, name, description, image, hashtags, link } = project;
 ---
-<div class="max-w-sm bg-white rounded-lg shadow">
+<div class="max-w-sm bg-white rounded-lg shadow hover:scale-90">
     <a href={link.length ? link : null}  target="_blank">
     {image.length ? 
       <img class="rounded-t-lg" src={image} alt={`project #${id}`}> 
